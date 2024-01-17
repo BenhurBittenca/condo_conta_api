@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "ec13d17d-8b0e-44f9-8cda-6f897d88a6b8",
+		"name": "Account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25167351"
+	},
+	"item": [
+		{
+			"name": "current-account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner_id\": 1,\n    \"owner_name\": \"Benhur Felipe de Bittencourt\",\n    \"account_value\": 1000.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/account/v1/current-account/8e6e5686-28d0-40a2-96c5-af58ef2e924d",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"v1",
+						"current-account",
+						"8e6e5686-28d0-40a2-96c5-af58ef2e924d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "current-account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner_id\": 1,\n    \"owner_name\": \"Benhur Felipe de Bittencourt\",\n    \"account_value\": 1000.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/account/v1/current-account/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"v1",
+						"current-account",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "savings-account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner_id\": 1,\n    \"owner_name\": \"Benhur Felipe de Bittencourt\",\n    \"account_value\": 1.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/account/v1/savings-account/89065d01-629e-42bd-a375-551c5257d9c0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"v1",
+						"savings-account",
+						"89065d01-629e-42bd-a375-551c5257d9c0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "savings-account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner_id\": 1,\n    \"owner_name\": \"Benhur Felipe de Bittencourt\",\n    \"account_value\": 1.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/account/v1/savings-account/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"v1",
+						"savings-account",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Saldo de conta bancária",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner_id\": 1,\n    \"owner_name\": \"Benhur Felipe de Bittencourt\",\n    \"account_value\": 1.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/account/v1/get-account/?owner_id=1&type_account=saving",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"v1",
+						"get-account",
+						""
+					],
+					"query": [
+						{
+							"key": "owner_id",
+							"value": "1"
+						},
+						{
+							"key": "type_account",
+							"value": "saving"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Extrato bancário - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Transferencia de teste 2\",\n    \"value\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/account/v1/transfer-account/?owner_id=1&transfer_type=resgate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"v1",
+						"transfer-account",
+						""
+					],
+					"query": [
+						{
+							"key": "owner_id",
+							"value": "1"
+						},
+						{
+							"key": "transfer_type",
+							"value": "resgate"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Saldo de conta bancária - FAIL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"owner_id\": 1,\n    \"owner_name\": \"Benhur Felipe de Bittencourt\",\n    \"account_value\": 1.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/account/v1/get-account/?owner_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"v1",
+						"get-account",
+						""
+					],
+					"query": [
+						{
+							"key": "owner_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Extrato bancário",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"Transferencia de teste 2\",\n    \"value\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/account/v1/transfer-account/?owner_id=1&transfer_type=resgate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"account",
+						"v1",
+						"transfer-account",
+						""
+					],
+					"query": [
+						{
+							"key": "owner_id",
+							"value": "1"
+						},
+						{
+							"key": "transfer_type",
+							"value": "resgate"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
