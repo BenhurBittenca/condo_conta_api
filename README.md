@@ -13,7 +13,7 @@ Certifique-se de ter o Python 3.6 ou superior instalado. Recomendamos o uso do P
 3. Instale um ambiente virtual (opcional, mas recomendado)
 4. Instale as dependências: **pip install -r requirements.txt**
 5. Execute a aplicação: **python3 manage.py runserver 8080**
-6. Abra o Postman e importe as collections: **As coleções estão na pasta 'collections'. Importe-as para o Postman.**
+6. Abra o Postman e importe as collections: **As coleções estão no arquivo 'Account.postman_collection.json'. Importe-as para o Postman.**
 7. Execute as operações no Postman:
    * POST current-account
    * POST savings-account
